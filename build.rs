@@ -8,7 +8,7 @@ fn main() {
     println!("cargo:rustc-link-lib=cdds-util");
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
-        .clang_arg("-I/usr/local/include")
+        .clang_arg("-I/home/ros/workspace/zenoh_dds_dep_ws/install/cyclocut/include/")
         .generate_comments(false)
         .generate()
         .expect("Unable to generate bindings");
